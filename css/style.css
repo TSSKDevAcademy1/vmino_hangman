@@ -1,0 +1,13 @@
+.center {
+	text-align:center;
+	margin-bottom:40px;
+}
+
+#secret {
+	font-size:30px;
+	letter-spacing: 0.5em; 
+	text-align: center;
+}
+* {
+/*	border:1px solid;*/
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Hangman</title>
+  	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header class="row">
+	<h1 class="col-md-12 center">Hangman</h1>
+</header>
+
+<section class="row">
+	<div class="col-md-12 center">
+		<img src="images/phase1.png" alt="obrazok" id="phase">
+	</div>
+</section>	
+
+<section class="row">
+	<div class="col-md-12 center">
+		<span id="secret">
+		_______
+		</span>
+	</div>
+</section>
+
+<section class="row">
+	<div class="col-md-12 center">
+		<div class="btn-group" id="alphabet">	
+<!-- 		<button type="button" class="btn btn-default">A</button>
+		<button type="button" class="btn btn-default">B</button>
+		<button type="button" class="btn btn-default">C</button>
+		<button type="button" class="btn btn-default">D</button>
+		<button type="button" class="btn btn-default">E</button>
+		<button type="button" class="btn btn-default">F</button>
+		<button type="button" class="btn btn-default">G</button>
+		<button type="button" class="btn btn-default">H</button>
+		<button type="button" class="btn btn-default">I</button>
+		<button type="button" class="btn btn-default">J</button>
+		<button type="button" class="btn btn-default">K</button>
+		<button type="button" class="btn btn-default">L</button>
+		<button type="button" class="btn btn-default">M</button>
+		<button type="button" class="btn btn-default">N</button>
+		<button type="button" class="btn btn-default">O</button>
+		<button type="button" class="btn btn-default">P</button>
+		<button type="button" class="btn btn-default">Q</button>
+		<button type="button" class="btn btn-default">R</button>
+		<button type="button" class="btn btn-default">S</button>
+		<button type="button" class="btn btn-default">T</button>
+		<button type="button" class="btn btn-default">U</button>
+		<button type="button" class="btn btn-default">V</button>
+		<button type="button" class="btn btn-default">W</button>
+		<button type="button" class="btn btn-default">X</button>
+		<button type="button" class="btn btn-default">Y</button>
+		<button type="button" class="btn btn-default">Z</button> -->
+		</div>
+	</div>
+</section>
+
+
+<section class="row">
+	<div class="col-md-12 center">
+		<button type="button" class="btn btn-primary">Restart</button>
+	</div>
+</section>
+
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/hangman.js"></script>
+
+</html>

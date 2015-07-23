@@ -3,9 +3,13 @@ var secret = 'javascript';
 var lettersGuessed = '';
 var a = "";
 var counter = 1;
+var counterWin = 0;
 var group = document.getElementById('alphabet');
 var phase = document.getElementById('phase');
 var actualSecret = "";
+var restart = document.getElementById('restart');
+var win = 0;
+var lose = 0;
 
 function getGuessedWord(secret, lettersGuessed){
   var result='';
@@ -36,24 +40,32 @@ function onClick(event){
     if (counter<6)
     phase.setAttribute('src','images/phase'+ counter +'.png');
   }
+  //ak koniec, vypis slovo, napis, vypni tlacidla
   if(counter==5){
     sec.textContent = getGuessedWord(secret, secret);
     alert('prehral si!');
-    // for (var btn of document.getElementById('alphabet')){
-    //   btn.setAttribute('disabled','disabled');
-    // }
+    for (var btn of document.getElementById('alphabet').childNodes){
+      btn.setAttribute('disabled','disabled');
+    }
   }
-  
-  
-  // endOfGame(secret, lettersGuessed);
+  if (sec.textContent == secret && counter < 5) {
+    alert('Vyhral si');
+    for (var btn of document.getElementById('alphabet').childNodes){
+      btn.setAttribute('disabled','disabled');
+    }
+  }
 }
 
-// function endOfGame(secret, lettersGuessed){
-//   if (secret == lettersGuessed) {
-//     console.log('end');
-//   }
-//   return;
-// }
+function clickRestart(){
+  lettersGuessed = "";
+  sec.textContent = getGuessedWord(secret, lettersGuessed);
+    for (var btn of document.getElementById('alphabet').childNodes){
+      btn.removeAttribute('disabled');
+    }
+    counter = 1;
+    counterWin = 0;
+}
+
 
 window.onload = function(){
 
@@ -66,6 +78,7 @@ for(var c of 'ABCDEFGHIJKLMNOPQRSTUVWXYZ') {
   element.textContent = c;
   element.addEventListener('click', onClick);
   group.appendChild(element);
+  restart.addEventListener('click', clickRestart);
 }
 
 }

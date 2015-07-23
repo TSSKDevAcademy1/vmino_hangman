@@ -62,8 +62,9 @@ function clickRestart(){
     for (var btn of document.getElementById('alphabet').childNodes){
       btn.removeAttribute('disabled');
     }
-    counter = 1;
+    counter = 1; //reset counters
     counterWin = 0;
+    phase.setAttribute('src','images/phase'+ counter +'.png') //reset image
 }
 
 
